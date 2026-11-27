@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "TorQ",
+    "slug": "torq",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light"
+  }
+}
