@@ -49,6 +49,8 @@ pnpm test
 pnpm build
 ```
 
+La CI (`.github/workflows/ci.yml`) ejecuta estas comprobaciones en cada PR y en `main`, además de `pnpm audit --audit-level=high`. Si falla la auditoría, actualiza la dependencia afectada (`pnpm why <paquete>` muestra quién la trae). No fusiones con la CI en rojo.
+
 Para añadir dependencias al móvil usa `pnpm --filter @torq/mobile exec expo install <paquete>`, que elige versiones compatibles con el SDK.
 
 Los secretos y archivos `.env` no se suben al repo.
