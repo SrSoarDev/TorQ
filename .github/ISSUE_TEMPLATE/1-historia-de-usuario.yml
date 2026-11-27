@@ -1,0 +1,87 @@
+name: Historia de usuario (HU)
+description: Una funcionalidad vista desde el usuario. Es la unidad de trabajo del equipo.
+title: "HU: "
+labels: ["historia"]
+projects: ["SrSoarDev/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        El número de este issue es el id de la HU. Si el issue es el #12, la HU es **HU-12**,
+        la rama `feat/HU-12-descripcion-corta` y el PR se titula `HU-12: ...`.
+  - type: input
+    id: como
+    attributes:
+      label: Como...
+      description: Quién quiere esto (organizador, asistente, visitante, moderador, administrador...).
+      placeholder: organizador autorizado
+    validations:
+      required: true
+  - type: textarea
+    id: quiero
+    attributes:
+      label: Quiero...
+      description: Qué quiere hacer.
+      placeholder: crear un evento con fecha, ubicación y aforo de personas y vehículos
+    validations:
+      required: true
+  - type: textarea
+    id: para
+    attributes:
+      label: Para...
+      description: Qué valor obtiene.
+      placeholder: que la comunidad pueda descubrirlo y confirmar asistencia
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Condiciones verificables. Una por línea, idealmente en formato Dado / Cuando / Entonces.
+      value: |
+        - [ ] Dado ..., cuando ..., entonces ...
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: estimacion
+    attributes:
+      label: Estimación (puntos)
+      description: Esfuerzo relativo. Si es más de 8, divide la HU.
+      options: ["1", "2", "3", "5", "8", "13 (dividir)", "Sin estimar"]
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: Prioridad
+      options: ["P0 - Bloquea el lanzamiento", "P1 - Evolución inicial", "P2 - Posterior al lanzamiento"]
+    validations:
+      required: true
+  - type: dropdown
+    id: epica
+    attributes:
+      label: Épica
+      options: ["Plataforma", "Auth", "Eventos", "Asistencia", "QR", "Moderación", "Otra"]
+    validations:
+      required: true
+  - type: checkboxes
+    id: areas
+    attributes:
+      label: Áreas afectadas
+      options:
+        - label: API (NestJS)
+        - label: Web (Next.js)
+        - label: Móvil (Expo)
+        - label: Infraestructura (GCP / CI)
+  - type: input
+    id: dependencias
+    attributes:
+      label: Dependencias
+      description: Otras HU que deben estar hechas antes.
+      placeholder: "#10, #11"
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas, diseño o referencias
+      description: Enlaces al prototipo, al documento maestro, capturas, dudas abiertas.

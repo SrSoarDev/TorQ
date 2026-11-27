@@ -1,0 +1,47 @@
+name: Bug
+description: Algo que no funciona como dice su HU.
+title: "Bug: "
+labels: ["bug"]
+projects: ["SrSoarDev/3"]
+body:
+  - type: input
+    id: hu
+    attributes:
+      label: HU relacionada
+      placeholder: "#12"
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperabas
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Qué pasó
+      description: Incluye capturas o logs si los tienes.
+    validations:
+      required: true
+  - type: dropdown
+    id: severidad
+    attributes:
+      label: Severidad
+      options: ["Crítico - bloquea uso o expone datos", "Grave - función principal rota", "Menor - tiene solución temporal", "Cosmético"]
+    validations:
+      required: true
+  - type: dropdown
+    id: entorno
+    attributes:
+      label: Dónde
+      multiple: true
+      options: ["Web", "Android", "iOS", "API", "Local", "Dev (GCP)", "Prod"]

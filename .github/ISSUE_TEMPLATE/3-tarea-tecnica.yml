@@ -1,0 +1,32 @@
+name: Tarea técnica
+description: Trabajo técnico sin valor directo para el usuario (configuración, refactor, deuda técnica, spike).
+title: "Tarea: "
+labels: ["tarea-tecnica"]
+projects: ["SrSoarDev/3"]
+body:
+  - type: textarea
+    id: que
+    attributes:
+      label: Qué hay que hacer
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por qué
+      description: Qué HU desbloquea o qué riesgo reduce.
+    validations:
+      required: true
+  - type: textarea
+    id: hecho
+    attributes:
+      label: Cuándo está terminada
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: estimacion
+    attributes:
+      label: Estimación (puntos)
+      options: ["1", "2", "3", "5", "8", "Sin estimar"]
