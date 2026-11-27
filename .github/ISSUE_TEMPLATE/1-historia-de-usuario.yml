@@ -62,7 +62,7 @@ body:
     id: epica
     attributes:
       label: Épica
-      options: ["Plataforma", "Auth", "Eventos", "Asistencia", "QR", "Moderación", "Otra"]
+      options: ["Plataforma", "Auth", "Perfiles", "Eventos", "Descubrimiento", "Asistencia", "QR", "Notificaciones", "Moderación", "Administración", "Contenido", "Valoraciones", "Otra"]
     validations:
       required: true
   - type: checkboxes
