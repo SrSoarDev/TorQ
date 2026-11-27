@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Dependencias que traen binarios precompilados: no necesitan scripts de instalación.
+ignoredBuiltDependencies:
+  - '@parcel/watcher'

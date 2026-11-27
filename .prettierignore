@@ -1,0 +1,15 @@
+pnpm-lock.yaml
+dist/
+coverage/
+.next/
+.expo/
+next-env.d.ts
+
+# Documentación y agentes: su formato no se gestiona aquí
+*.md
+.claude/
+.github/
+
+# Material local fuera del repo
+Context/
+prototipo/
